@@ -9,7 +9,7 @@ let emacs2nix = import ./default.nix { inherit nixpkgs profiling; }; in
 stdenv.mkDerivation {
   name = "interactive-${emacs2nix.name}-environment";
   nativeBuildInputs = [
-    emacs nixUnstable
+    emacs nixUnstable nix-prefetch-git nix-prefetch-hg nix-prefetch-cvs nix-prefetch-svn nix-prefetch-bzr
     bazaar cvs curl darcs fossil git mercurial subversion
     emacs2nix
   ];

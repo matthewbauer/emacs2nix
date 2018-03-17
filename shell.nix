@@ -16,8 +16,7 @@ let
   addBuildTools = drv:
     lib.addBuildTools drv
     [
-      emacs
-      nix nix-prefetch-scripts
+      emacs nixUnstable nix-prefetch-git nix-prefetch-hg nix-prefetch-cvs nix-prefetch-svn nix-prefetch-bzr
       bazaar cvs curl darcs fossil git mercurial subversion
     ];
 in
