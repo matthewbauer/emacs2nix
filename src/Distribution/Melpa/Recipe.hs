@@ -85,7 +85,6 @@ readRecipes melpaDir = do
   let args = [ "-Q"
              , "--batch"
              , "-L", packageBuildDir
-             , "-l", packageBuildEl
              , "-l", dumpRecipesEl
              , "-f", "dump-recipes-json", recipesDir
              ]
