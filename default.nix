@@ -10,8 +10,6 @@ let
       mkDerivation = args: super.mkDerivation (args // {
         enableLibraryProfiling = profiling;
       });
-
-      hnix = self.callPackage ./hnix/project.nix {};
     };
   };
   filterSource =
